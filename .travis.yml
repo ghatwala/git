@@ -6,23 +6,32 @@ cache:
 
 matrix:
   include:
-    - arch: amd64
+    - env: ENV=OSX
+      arch: amd64
       os: osx
-    - arch: amd64
+    - env: ENV=xenial
+      arch: amd64
       dist: xenial
-    - arch: amd64
+    - env: ENV=bionic
+      arch: amd64
       dist: bionic
-    - arch: ppc64le
+    - env: ENV=bionic
+      arch: ppc64le
       dist: bionic
-    - arch: ppc64le
+    - env: ENV=xenial
+      arch: ppc64le
       dist: xenial
-    - arch: arm64
+    - env: ENV=bionic
+      arch: arm64
       dist: bionic
-    - arch: arm64
+    - env: ENV=xenial
+      arch: arm64
       dist: xenial
-    - arch: s390x
+    - env: ENV=bionic
+      arch: s390x
       dist: bionic
-    - arch: s390x
+    - env: ENV=xenial
+      arch: s390x
       dist: xenial
 
 compiler:
