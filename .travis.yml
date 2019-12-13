@@ -9,34 +9,71 @@ matrix:
     - env: ENV=OSX
       arch: amd64
       os: osx
+      compiler: gcc
     - env: ENV=xenial
       arch: amd64
       dist: xenial
+      compiler: gcc
+    - env: ENV=xenial
+      arch: amd64
+      dist: xenial
+      compiler: clang
     - env: ENV=bionic
       arch: amd64
       dist: bionic
+      compiler: gcc
+    - env: ENV=bionic
+      arch: amd64
+      dist: bionic
+      compiler: clang
     - env: ENV=bionic
       arch: ppc64le
       dist: bionic
+      compiler: gcc
+    - env: ENV=bionic
+      arch: ppc64le
+      dist: bionic
+      compiler: clang
     - env: ENV=xenial
       arch: ppc64le
       dist: xenial
+      compiler: gcc
+    - env: ENV=xenial
+      arch: ppc64le
+      dist: xenial
+      compiler: clang
     - env: ENV=bionic
       arch: arm64
       dist: bionic
+      compiler: gcc
+    - env: ENV=bionic
+      arch: arm64
+      dist: bionic
+      compiler: clang
     - env: ENV=xenial
       arch: arm64
       dist: xenial
+      compiler: gcc
+    - env: ENV=xenial
+      arch: arm64
+      dist: xenial
+      compiler: clang
     - env: ENV=bionic
       arch: s390x
       dist: bionic
+      compiler: gcc
+    - env: ENV=bionic
+      arch: s390x
+      dist: bionic
+      compiler: clang
     - env: ENV=xenial
       arch: s390x
       dist: xenial
-
-compiler:
-  - gcc
-  - clang
+      compiler: gcc
+    - env: ENV=xenial
+      arch: s390x
+      dist: xenial
+      compiler: clang
 
 script: ci/arm64-segfault-demo.sh
 
