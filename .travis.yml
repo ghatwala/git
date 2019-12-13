@@ -4,14 +4,24 @@ cache:
   directories:
     - $HOME/travis-cache
 
-os: linux
-dist: bionic
-
-arch:
-  - amd64
-  - arm64
-  - s390x
-  - ppc64le
+matrix:
+  include:
+    - arch: amd64
+      dist: xenial
+    - arch: amd64
+      dist: bionic
+    - arch: ppc64le
+      dist: bionic
+    - arch: ppc64le
+      dist: xenial
+    - arch: arm64
+      dist: bionic
+    - arch: arm64
+      dist: xenial
+    - arch: s390x
+      dist: bionic
+    - arch: s390x
+      dist: xenial
 
 compiler:
   - gcc
